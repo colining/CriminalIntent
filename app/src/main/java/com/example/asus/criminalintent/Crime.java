@@ -61,6 +61,11 @@ public class Crime extends android.text.format.DateFormat{///lalalal
         mDate=new Date();
 
 
-
     }
+    @Override
+    public String toString()
+    {
+        return mTitle;
+    }
+
 }
