@@ -13,7 +13,7 @@ import java.util.UUID;
 /**
  * Created by asus on 2016/7/3.
  */
-public class Crime extends android.text.format.DateFormat{///lalalal
+public class Crime extends android.text.format.DateFormat{//罪犯类 以及罪犯所携带的数据
     private UUID mId;
     private  String mTitle;
     private Date mDate=null;

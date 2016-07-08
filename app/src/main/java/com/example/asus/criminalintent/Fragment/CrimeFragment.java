@@ -1,4 +1,4 @@
-package com.example.asus.criminalintent;
+package com.example.asus.criminalintent.Fragment;
 
 
 import android.os.Bundle;
@@ -14,6 +14,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.support.v4.app.Fragment;
+
+import com.example.asus.criminalintent.Crime;
+import com.example.asus.criminalintent.R;
 
 import java.text.SimpleDateFormat;
 

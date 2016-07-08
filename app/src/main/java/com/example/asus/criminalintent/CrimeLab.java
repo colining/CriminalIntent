@@ -13,6 +13,7 @@ public class CrimeLab
     private ArrayList<Crime> crimes;
     private  static  CrimeLab crimeLab;
     private Context appcontext;
+
     private CrimeLab(Context appcontext)
     {
         this.appcontext=appcontext;

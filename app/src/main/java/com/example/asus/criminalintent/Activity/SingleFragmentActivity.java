@@ -1,14 +1,17 @@
-package com.example.asus.criminalintent;
+package com.example.asus.criminalintent.Activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
+import com.example.asus.criminalintent.R;
+
 /**
  * Created by asus on 2016/7/7.
  */
 public abstract class SingleFragmentActivity extends FragmentActivity {
-    protected  abstract  Fragment createFragment();
+    protected  abstract  Fragment createFragment();         //定义createFragemnt的抽象函数
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +20,7 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         Fragment fragment =fm.findFragmentById(R.id.fragmentContainer);
         if(fragment==null)
         {
-            fragment=createFragment();
+            fragment=createFragment();                                        //抽象函数获得fragment 在子类中便可具体实现
             fm.beginTransaction().add(R.id.fragmentContainer,fragment).commit();
         }
     }
