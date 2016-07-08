@@ -1,6 +1,7 @@
 package com.example.asus.criminalintent.Fragment;
 
 import android.app.ListFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.asus.criminalintent.Activity.CrimeActivity;
 import com.example.asus.criminalintent.Crime;
 import com.example.asus.criminalintent.CrimeLab;
 import com.example.asus.criminalintent.R;
@@ -40,7 +42,12 @@ public class CrimeListFragment extends android.support.v4.app.ListFragment{
     {
        // Crime c =(Crime)(getListAdapter()).getItem(position);
         Crime c =((CrimeAdapter)getListAdapter()).getItem(position);
-        Log.d(TAG, c.getmTitle()+"was click");
+        //Log.d(TAG, c.getmTitle()+"was click");
+        //启动CrimeAcivity
+        Intent intent =new Intent(getActivity(), CrimeActivity.class);
+        startActivity(intent);
+
+
     }
 
     private   class  CrimeAdapter extends  ArrayAdapter<Crime> {
@@ -63,6 +70,7 @@ public class CrimeListFragment extends android.support.v4.app.ListFragment{
             TextView dateTextview =(TextView)convertView.findViewById(R.id.crime_list_item_dateTextView);
             dateTextview.setText(c.getmDate().toString());
             CheckBox sovledCheckbox= (CheckBox)convertView.findViewById(R.id.crime_list_item_sovledCheckBox);
+            sovledCheckbox.setChecked(c.ismSolved());
 
 
             return  convertView;
