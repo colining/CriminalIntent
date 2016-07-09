@@ -45,6 +45,7 @@ public class CrimeListFragment extends android.support.v4.app.ListFragment{
         //Log.d(TAG, c.getmTitle()+"was click");
         //启动CrimeAcivity
         Intent intent =new Intent(getActivity(), CrimeActivity.class);
+        intent.putExtra(CrimeFragment.EXTRA_CRIME_ID,c.getmId());
         startActivity(intent);
 
 
